@@ -1,0 +1,49 @@
+.dark-netflix {
+  background-color: #141414;
+}
+
+.text-color {
+  color: white;
+}
+
+.heading {
+  background-color: #141414;
+  color: white;
+  font-size: x-large;
+}
+
+.white {
+  color: white;
+}
+body {
+    background-color: #141414;
+    color: white
+}
+a {
+    color: white
+}
+
+nav {
+    background: #141414
+}
+
+hr {
+    background: gray;
+}
+.text-gray {
+  position: relative;
+  background-color: gray;
+  padding: 5px 20px 5px 20px;
+  width: 60%;
+}
+
+span {
+    margin-left: 20px;
+    margin-top: 3px
+}
+h1 {
+  margin-left: 305px;
+}
+h2 {
+  color: white
+}
