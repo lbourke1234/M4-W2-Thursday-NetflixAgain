@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Navbar, Dropdown, Nav } from "react-bootstrap";
-import netflix from "../Images/netflix_logo.png";
-import dropdown from "../Images/dropdown.png";
-
+import React, { Component } from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Navbar, Dropdown, Nav, Form } from 'react-bootstrap'
+import netflix from '../Images/netflix_logo.png'
+import dropdown from '../Images/dropdown.png'
+import { Link } from 'react-router-dom'
 
 class MyNav extends Component {
   render() {
@@ -17,21 +17,39 @@ class MyNav extends Component {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#shows">TV Shows</Nav.Link>
+              <Link to="/">
+                <div className="nav-link" href="#home">
+                  Home
+                </div>
+              </Link>
+              <Link to="/tv-shows">
+                <div className="nav-link" href="#shows">
+                  TV Shows
+                </div>
+              </Link>
               <Nav.Link href="#movies">Movies</Nav.Link>
               <Nav.Link href="#recent">Recently Added</Nav.Link>
               <Nav.Link href="#list">My List</Nav.Link>
             </Nav>
 
+            <Form.Control
+              style={{ width: '250px' }}
+              type="text"
+              placeholder="Search here"
+              onChange={(e) => this.props.setSearchValue(e.target.value)}
+            />
+            <Form.Text className="text-muted"></Form.Text>
+
             <ul className="navbar-nav">
               <li className="nav-item">
                 <a className="nav-link" href="#comedy">
-                <i class="bi bi-search"></i>
+                  <i class="bi bi-search"></i>
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#kids">KIDS</a>
+                <a className="nav-link" href="#kids">
+                  KIDS
+                </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#hello">
@@ -43,8 +61,8 @@ class MyNav extends Component {
             <Dropdown>
               <Dropdown.Toggle
                 style={{
-                  backgroundColor: "black",
-                  border: "none",
+                  backgroundColor: 'black',
+                  border: 'none'
                 }}
                 id="dropdown-basic"
                 className="p-0"
@@ -61,8 +79,8 @@ class MyNav extends Component {
           </Navbar.Collapse>
         </Navbar>
       </div>
-    );
+    )
   }
 }
 
-export default MyNav;
+export default MyNav
