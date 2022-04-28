@@ -10,7 +10,7 @@ import { useState } from 'react'
 
 function App() {
   const [searchValue, setSearchValue] = useState('')
-
+  console.log('in App.js', searchValue)
   return (
     <BrowserRouter>
       <div className="dark-netflix">
